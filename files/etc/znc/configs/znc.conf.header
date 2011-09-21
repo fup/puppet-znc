@@ -1,0 +1,9 @@
+AnonIPLimit  = 10
+Listener4    = +8080
+ConnectDelay = 5
+ServerThrottle = 30
+Skin         = dark-clouds
+StatusPrefix = *
+LoadModule   = modperl
+LoadModule   = saslauth saslauthd
+LoadModule   = webadmin

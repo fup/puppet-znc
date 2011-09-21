@@ -1,0 +1,4 @@
+class znc::params {
+  
+
+}
