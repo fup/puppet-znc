@@ -1,8 +1,7 @@
 <User <%= name %>>
-        Pass       = sha256#a12b6346943e63a069ff40dcfac14b2b417eee9380b4b2523489f26a5c6b084e#U5o.Xi8fQF6!/qi9Sb4J#
-        Admin      = true
-        Nick       = <%= name %>|<%= hostname %>
-        AltNick    = <%= name %>_|<%= hostname %>
+        Pass       = changeme
+        Nick       = <%= name %>
+        AltNick    = <%= name %>_
         Ident      = <%= name %>
         RealName   = <%= name %>
         QuitMsg = ZNC - http://znc.sourceforge.net
@@ -12,7 +11,7 @@
         MultiClients = true
         BounceDCCs = true
         DenyLoadMod = false
-        Admin = true
+        Admin = <%= admin %>
         DenySetVHost = false
         DCCLookupMethod = default
         TimestampFormat = [%H:%M:%S]
@@ -22,6 +21,5 @@
         JoinTries = 10
         MaxJoins = 5
         IRCConnectEnabled = true
-
         Server     = localhost.localdomain 6667
 </User>
