@@ -1,3 +1,30 @@
+# Class: znc::config
+#
+# Description
+#  This class is designed to configure the system to use ZNC after packages have been deployed
+#
+# Parameters:
+#   $auth_type: (plain|sasl). Will determine to use local auth or SASL auth.
+#   $ssl: (true|false). To enable or disable SSL support. Will autogen a SSL certificate.
+#   $port: port to run ZNC on.
+#   $organizationName: Org Name for SSL Self Signed Cert
+#   $localityName: City for SSL Self Signed Cert
+#   $stateOrProvinceName: State or Province for SSL Self Signed Cert
+#   $countryName: Country for SSL Self Signed Cert
+#   $emailAddress: Admin email for SSL Self Signed Cert
+#   $commonName: Common Name for SSL Self Signed Cert
+# 
+# Actions:
+#  - Sets up ZNC Seed Configuration
+#  - Sets up SSL (if configured)
+#  - Sets up Regular Users from params [znc::user]
+#  - Sets up Admin Users from params [znc::user, admin => true]
+#
+# Requires:
+#  This module has no requirements
+#
+# Sample Usage:
+#  This module should not be called directly.
 class znc::config(
   $auth_type,
   $ssl,

@@ -1,3 +1,24 @@
+# Define: znc::user
+#
+# Description: 
+#  This custom definition will create a stub file to allow ZNC users 
+#  to be added to the running config while not overwriting 
+#  any settings changed via the web interface. 
+#
+# Parameters:
+#  $admin: (true|false) describes whether a user is an admin user or not.
+#
+# Actions:
+#   Installs a stub file with a default set of parameters in the users directory
+#   This is a managed file-fragment directory that is also used to clean users
+#   from the config file if necessary as well
+#
+# Requires:
+#
+# Sample Usage:
+#   znc::user { 'jfryman': }
+#
+# This class file is not called directly
 define znc::user(
   $admin = 'false'
 ) {
